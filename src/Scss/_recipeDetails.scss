@@ -1,0 +1,83 @@
+/* RecipeDetails */
+.RecipeDetails{
+    padding: 20px;
+
+    h2{
+        font-family: 'Pacifico';
+        font-size: 48px;
+    }
+
+    .Box-Details{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        gap: 10px;
+        justify-content: space-around;
+
+        .Box-img{
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+
+            img{
+                max-width: 350px;
+                display: block;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+
+            div{
+                display: flex;
+                margin: auto;
+            }
+
+            a{
+                padding: 10px 20px;
+                border-radius: 10px;
+                margin: 10px;
+                cursor: pointer;
+                color: white;
+                &.youtube{
+                    background-color: red;
+                }
+
+                &.source{
+                    background-color: #21BA75;
+                }
+            }
+        }
+
+        ul{
+            padding: 10px;
+            color: black;
+            border-radius: 10px;
+            font-size: 16px;
+
+            &.step{
+                max-width: 500px;
+                border: 1px solid rgba(0, 0, 0, 0.138);
+            }
+
+            &.ingredients{
+                min-width: 300px;
+                background-color: white;
+                 div{
+                    padding: 10px;
+                    font-weight: bold;
+                    font-size: 20px;
+                    border-bottom: 5px solid rgba(0, 0, 0, 0.14);
+                 }
+
+                li{
+                    padding: 10px;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+
+
+    }
+}

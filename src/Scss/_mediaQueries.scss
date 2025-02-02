@@ -1,0 +1,121 @@
+/* Media Queries */
+@media (min-width:$min-pc) {
+    nav {
+        position: fixed;
+        ul {
+            transform: translateX(0);
+        }
+
+        .btn {
+            display: none;
+        }
+    }
+
+    section {
+        padding-left: 242px;
+        min-height: 100vh;
+    }
+    .container{
+        max-width: 80%;
+    }
+    footer{
+        .head{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        span{
+            text-align: center;
+        }
+    }
+    .Category{
+        color: rgba(0, 0, 0, 0.578);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.578);
+        border-radius: 20px;
+        margin-top: 20px;
+        &.active{
+            background-color: black;
+            color: white;
+        }
+        
+        &:not(.active):hover {
+            background-color: white;
+            transition: background-color .3s;
+        }
+        &:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transition: box-shadow .3s;
+        }
+    }
+    .ArrowDropdown{
+        display: none;
+    }
+}
+
+@media (max-width:$max-mobile) {
+    .toggle-Navbar {
+        background-color: rgba(0, 0, 0, 0.163);
+        position: fixed;
+        inset: 0;
+
+        ul {
+            transition: transform .2s;
+            transform: translateX(0);
+        }
+    }
+
+    footer{
+        .head{
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    .container{
+        max-width:95%;
+    }
+    .Category{
+        width: 100%;
+        &:not(.active):hover{
+            background-color: #2E63CD;
+            color: white;
+        }
+        &.active{
+            position: absolute;
+            inset: 0;
+            background-color: white;
+            z-index: 0;
+        }
+    }
+    .Categorys{
+        .display-categorys{
+            flex-direction: column;
+            background-color: white;
+            position: relative;
+            height: 40px;
+            overflow: hidden;
+            padding-top: 40px;
+            .ArrowDropdown{
+                position: absolute;
+                background-color: transparent;
+                width: 100%;
+                height: 40px;
+                z-index: 1;
+                top: 0;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                .ArrowDrop{
+                    font-size: 25px;
+                    color: black;
+                }
+            }
+        }
+    }
+    .not-found{
+        flex-direction: column;
+    }
+
+}

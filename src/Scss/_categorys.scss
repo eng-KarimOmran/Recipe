@@ -1,0 +1,32 @@
+/* Categorys */
+.Categorys{
+    min-height: 100vh;
+    padding: 20px;
+    h2{
+        padding-bottom: 20px;
+        font-size: 36px;
+        font-weight: 700;
+        background: linear-gradient(to right, #F29624, #DE6342);
+        color: transparent;
+        background-clip: text;
+        font-family: "Pacifico", cursive;
+    }
+    .display-categorys{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.090);
+    }
+    .open-display-categorys{
+        height: auto !important;
+    }
+    
+    .display-Recipe{
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}

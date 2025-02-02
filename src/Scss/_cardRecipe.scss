@@ -1,0 +1,68 @@
+/* CardRecipe */
+.CardRecipe{
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 50px;
+    margin-top: 40px;
+    transition: all .5s;
+    &:hover{
+        .img-CardRecipe{
+            img{
+                transform: rotate(360deg);
+                transition: transform .5s;
+            }
+        }
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        transform: scale(1.05);
+        transition: all .5s;
+    }
+
+    .img-CardRecipe{
+        position: relative;
+        margin-top: -50px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        img{
+            width: 100%;
+            display: block;
+            transform: rotate(0deg);
+            transition: transform .5s;
+        }
+    }
+
+    h3{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    
+    button{
+        border: 0;
+        background-color: #21BA75;
+        color: white;
+        padding: 8px 25px 8px 25px;
+        font-size: 19px;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        transition: all .5s;
+        &:hover{
+            transform: scale(1.05);
+            background-color: #059669;
+            transition: all .5s;
+        }
+    }
+
+    .strArea{
+        color: #059669;
+        padding: 5px 0;
+    }
+}

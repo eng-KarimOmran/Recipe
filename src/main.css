@@ -1,0 +1,445 @@
+/* Base */
+@font-face {
+  font-family: "ComicSans";
+  src: url("./fonts/comic-sans-ms.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pacifico";
+  src: url("./fonts/Pacifico.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: "ComicSans", cursive;
+  background-color: #F4F2EE;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+  position: relative;
+  z-index: 3;
+}
+nav ul {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  padding: 0 12px;
+  max-width: 242px;
+  min-height: 100vh;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.2s;
+  background-color: white;
+}
+nav ul li a {
+  color: black;
+  background-color: white;
+  width: 100%;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.27);
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+  display: block;
+}
+nav ul li a.active {
+  background-color: #F29724;
+  color: white;
+  font-weight: 600;
+  border: 0;
+  box-shadow: 0 10px 15px -3px #F29724, 0 4px 6px -4px #F29724;
+}
+nav ul li a .icon {
+  margin-right: 10px;
+}
+nav img {
+  width: 230px;
+}
+nav .btn {
+  margin: 12px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  position: relative;
+  background-color: white;
+  bottom: 0;
+  z-index: 4;
+}
+footer .head {
+  display: flex;
+  width: 100;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.152);
+  padding: 15px 0;
+}
+footer .head img {
+  display: block;
+  max-width: 50px;
+}
+footer .head .logo {
+  display: flex;
+}
+footer .head h2 {
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+}
+footer .head span {
+  color: #1D4ED8;
+  font-size: 24px;
+  font-weight: 700;
+}
+footer span {
+  color: rgb(107, 114, 128);
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  padding: 20px 0;
+}
+
+/* Categorys */
+.Categorys {
+  min-height: 100vh;
+  padding: 20px;
+}
+.Categorys h2 {
+  padding-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(to right, #F29624, #DE6342);
+  color: transparent;
+  background-clip: text;
+  font-family: "Pacifico", cursive;
+}
+.Categorys .display-categorys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+.Categorys .open-display-categorys {
+  height: auto !important;
+}
+.Categorys .display-Recipe {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Category */
+.Category {
+  text-transform: capitalize;
+  padding: 8px 16px;
+  max-height: 40px;
+  color: black;
+}
+
+/* NotFounf */
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #F29724;
+  min-height: 100vh;
+}
+.not-found img {
+  width: 95%;
+  max-width: 300px;
+}
+.not-found .box-found {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.not-found .f-404 {
+  font-size: 100px;
+  margin-bottom: -30px;
+}
+.not-found .error {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: #F29724;
+}
+.not-found p {
+  text-transform: capitalize;
+  font-size: 25px;
+  color: #F29724;
+}
+.not-found .back-to {
+  color: #A8B333;
+  border: 1px solid rgba(0, 0, 0, 0.216);
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* CardRecipe */
+.CardRecipe {
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 50px;
+  margin-top: 40px;
+  transition: all 0.5s;
+}
+.CardRecipe:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+.CardRecipe:hover .img-CardRecipe img {
+  transform: rotate(360deg);
+  transition: transform 0.5s;
+}
+.CardRecipe .img-CardRecipe {
+  position: relative;
+  margin-top: -50px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.CardRecipe .img-CardRecipe img {
+  width: 100%;
+  display: block;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+.CardRecipe h3 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.CardRecipe button {
+  border: 0;
+  background-color: #21BA75;
+  color: white;
+  padding: 8px 25px 8px 25px;
+  font-size: 19px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+}
+.CardRecipe button:hover {
+  transform: scale(1.05);
+  background-color: #059669;
+  transition: all 0.5s;
+}
+.CardRecipe .strArea {
+  color: #059669;
+  padding: 5px 0;
+}
+
+/* RecipeDetails */
+.RecipeDetails {
+  padding: 20px;
+}
+.RecipeDetails h2 {
+  font-family: "Pacifico";
+  font-size: 48px;
+}
+.RecipeDetails .Box-Details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 10px;
+  justify-content: space-around;
+}
+.RecipeDetails .Box-Details .Box-img {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+.RecipeDetails .Box-Details .Box-img img {
+  max-width: 350px;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.RecipeDetails .Box-Details .Box-img div {
+  display: flex;
+  margin: auto;
+}
+.RecipeDetails .Box-Details .Box-img a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+}
+.RecipeDetails .Box-Details .Box-img a.youtube {
+  background-color: red;
+}
+.RecipeDetails .Box-Details .Box-img a.source {
+  background-color: #21BA75;
+}
+.RecipeDetails .Box-Details ul {
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.RecipeDetails .Box-Details ul.step {
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.138);
+}
+.RecipeDetails .Box-Details ul.ingredients {
+  min-width: 300px;
+  background-color: white;
+}
+.RecipeDetails .Box-Details ul.ingredients div {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.14);
+}
+.RecipeDetails .Box-Details ul.ingredients li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+  nav {
+    position: fixed;
+  }
+  nav ul {
+    transform: translateX(0);
+  }
+  nav .btn {
+    display: none;
+  }
+  section {
+    padding-left: 242px;
+    min-height: 100vh;
+  }
+  .container {
+    max-width: 80%;
+  }
+  footer .head {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer span {
+    text-align: center;
+  }
+  .Category {
+    color: rgba(0, 0, 0, 0.578);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.578);
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  .Category.active {
+    background-color: black;
+    color: white;
+  }
+  .Category:not(.active):hover {
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+  .Category:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s;
+  }
+  .ArrowDropdown {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .toggle-Navbar {
+    background-color: rgba(0, 0, 0, 0.163);
+    position: fixed;
+    inset: 0;
+  }
+  .toggle-Navbar ul {
+    transition: transform 0.2s;
+    transform: translateX(0);
+  }
+  footer .head {
+    flex-direction: column;
+    align-items: start;
+  }
+  .container {
+    max-width: 95%;
+  }
+  .Category {
+    width: 100%;
+  }
+  .Category:not(.active):hover {
+    background-color: #2E63CD;
+    color: white;
+  }
+  .Category.active {
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    z-index: 0;
+  }
+  .Categorys .display-categorys {
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+  .Categorys .display-categorys .ArrowDropdown {
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+  .Categorys .display-categorys .ArrowDropdown .ArrowDrop {
+    font-size: 25px;
+    color: black;
+  }
+  .not-found {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
