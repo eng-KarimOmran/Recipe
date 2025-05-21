@@ -1,5 +1,5 @@
 import { useState } from "react"
-import logo from "../../assets/logo.png"
+import logo from "../../../public/logo.png"
 import { Link } from "react-router-dom"
 export default function NotFound() {
   const [ String , setString ] = useState()

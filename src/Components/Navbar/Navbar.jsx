@@ -1,5 +1,5 @@
 import { useState } from "react"
-import logo from "../../assets/logo.png"
+import logo from "../../../public/logo.png"
 import { ImSpoonKnife } from "react-icons/im";
 import { VscListFlat } from "react-icons/vsc";
 import { Link, useParams } from "react-router-dom";

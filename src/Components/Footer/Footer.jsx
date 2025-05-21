@@ -1,8 +1,6 @@
-import { useState } from "react"
-import logo from '../../assets/logo.png'
+import logo from '../../../public/logo.png'
 import { Link } from "react-router-dom"
 export default function Footer() {
-  const [ String , setString ] = useState()
   return (
     <footer>
       <div className="container">
@@ -11,9 +9,8 @@ export default function Footer() {
             <img src={logo} alt="logo" />
             <h2>Recipe</h2>
           </Link>
-          <span>Route</span>
         </div>
-        <span>&copy; 2025 Karim Omran<sup>TM</sup>.All Rights Reserved.</span>
+        <span>&copy; 2024 <a href="https://karim-abdelhalim-tau.vercel.app/">Karim Abdelhalim</a> .All Rights Reserved</span>
       </div>
     </footer>
   )

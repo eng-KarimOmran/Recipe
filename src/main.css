@@ -107,17 +107,17 @@ footer .head h2 {
   font-size: 24px;
   font-weight: 600;
 }
-footer .head span {
-  color: #1D4ED8;
-  font-size: 24px;
-  font-weight: 700;
-}
 footer span {
   color: rgb(107, 114, 128);
   font-size: 14px;
   font-weight: 400;
   display: block;
   padding: 20px 0;
+}
+footer span a {
+  color: #f2982c;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 /* Categorys */
@@ -131,7 +131,8 @@ footer span {
   font-weight: 700;
   background: linear-gradient(to right, #F29624, #DE6342);
   color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   font-family: "Pacifico", cursive;
 }
 .Categorys .display-categorys {
@@ -440,6 +441,4 @@ footer span {
   .not-found {
     flex-direction: column;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
